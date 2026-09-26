@@ -15,21 +15,28 @@ export default function Home() {
         </div>
         <div className={styles.navLinks}>
           <a href="#features">Features</a>
-          <a href="#how-it-works">How It Works</a>
-          <Link href="/docs">Documentation</Link>
-          <Link href="/about">About</Link>
-          <Link href="/dashboard" className={styles.navCta}>Dashboard</Link>
+          <Link href="/investigations">Use Cases</Link>
+          <Link href="/projects">Integration</Link>
+          <Link href="/docs">Docs</Link>
+          <Link href="/about">About Us</Link>
+          <Link href="/dashboard" className={styles.navCta}>Go to Dashboard</Link>
         </div>
       </nav>
 
       <div className={styles.hero}>
         <div className={styles.glow} />
+        
+        <div className={styles.heroBadge}>
+          <Sparkles size={14} /> Evalipie 2.0 is now live for open source
+        </div>
+
         <h1 className={styles.title}>
           Give us the ticket.<br />
           <span className={styles.gradientText}>We'll find what broke.</span>
         </h1>
+        
         <p className={styles.description}>
-          An autonomous AI software ticket resolver that investigates bugs, finds root causes, applies authorized fixes, and verifies them with real evidence.
+          The premier autonomous AI software ticket resolver. Evalipie seamlessly investigates bugs, finds root causes, applies authorized fixes, and rigorously verifies them using real evidence.
         </p>
         
         <div className={styles.heroActions}>
@@ -37,102 +44,113 @@ export default function Home() {
             Start Investigation
           </Link>
           <Link href="/dashboard" className={styles.secondaryBtn}>
-            Explore Demo
+            View Live Demo
           </Link>
         </div>
       </div>
 
       <div className={styles.workflowSection}>
         <div className={styles.workflowContainer}>
-          <div className={styles.workflowStep}>Ticket</div>
+          <div className={styles.workflowStep}>Ticket Submitted</div>
           <div className={styles.workflowArrow}>→</div>
-          <div className={styles.workflowStep}>Understand</div>
+          <div className={styles.workflowStep}>Understand Context</div>
           <div className={styles.workflowArrow}>→</div>
-          <div className={styles.workflowStep}>Inspect</div>
+          <div className={styles.workflowStep}>Inspect Source</div>
           <div className={styles.workflowArrow}>→</div>
-          <div className={styles.workflowStep}>Reproduce</div>
+          <div className={styles.workflowStep}>Reproduce Issue</div>
           <div className={styles.workflowArrow}>→</div>
-          <div className={styles.workflowStep}>Diagnose</div>
+          <div className={styles.workflowStep}>Diagnose Root Cause</div>
           <div className={styles.workflowArrow}>→</div>
-          <div className={styles.workflowStep}>Fix</div>
+          <div className={styles.workflowStep}>Propose Fix</div>
           <div className={styles.workflowArrow}>→</div>
-          <div className={styles.workflowStep}>Test</div>
+          <div className={styles.workflowStep}>Run Regression</div>
           <div className={styles.workflowArrow}>→</div>
-          <div className={styles.workflowStep}>Verify</div>
+          <div className={styles.workflowStep} style={{ background: '#f0fdf4', color: '#166534', borderColor: '#86efac' }}>Verified Resolution</div>
         </div>
       </div>
 
       <div className={styles.features} id="features">
+        <h2 className={styles.sectionTitle}>Built for Engineering Teams</h2>
+        <p className={styles.sectionSubtitle}>Stop guessing what went wrong. Evalipie relies on hard evidence, execution sandboxes, and actual stack traces to debug your code.</p>
+        
         <div className={styles.featureGrid}>
           <div className={styles.card}>
             <div className={styles.cardIcon}>
-              <Terminal size={24} color="#8b5cf6" />
+              <Terminal size={24} />
             </div>
             <h3 className={styles.cardTitle}>Evidence-Based Debugging</h3>
-            <p className={styles.cardDesc}>We don't just guess. Evalipie clones your code, runs it in a secure sandbox, and extracts real stack traces before proposing a fix.</p>
+            <p className={styles.cardDesc}>We don't just hallucinate a fix. Evalipie clones your code, runs it in a secure sandbox environment, and extracts real stack traces before proposing a change.</p>
           </div>
           <div className={styles.card}>
-            <div className={styles.cardIcon}>
-              <Shield size={24} color="#10b981" />
+            <div className={styles.cardIcon} style={{ background: '#f0fdf4', color: '#10b981' }}>
+              <Shield size={24} />
             </div>
-            <h3 className={styles.cardTitle}>Security & Authorization</h3>
-            <p className={styles.cardDesc}>Granular permissions. You decide if the agent is allowed to just investigate, or if it can push code and run tests.</p>
+            <h3 className={styles.cardTitle}>Granular Authorization</h3>
+            <p className={styles.cardDesc}>You retain complete control. Configure granular permissions so the agent is only allowed to investigate, or fully authorize it to push code and execute tests.</p>
           </div>
           <div className={styles.card}>
-            <div className={styles.cardIcon}>
-              <Activity size={24} color="#3b82f6" />
+            <div className={styles.cardIcon} style={{ background: '#eff6ff', color: '#3b82f6' }}>
+              <Activity size={24} />
             </div>
-            <h3 className={styles.cardTitle}>TrueForge-Powered</h3>
-            <p className={styles.cardDesc}>Built on top of TrueForge's autonomous agent orchestration for enterprise-grade reliability and complex reasoning.</p>
+            <h3 className={styles.cardTitle}>TrueForge-Powered Engine</h3>
+            <p className={styles.cardDesc}>Built natively on top of TrueForge's autonomous agent orchestration platform for enterprise-grade reliability, tool usage, and complex reasoning over large codebases.</p>
           </div>
           <div className={styles.card}>
-            <div className={styles.cardIcon}>
-              <GitBranch size={24} color="#f59e0b" />
+            <div className={styles.cardIcon} style={{ background: '#fef3c7', color: '#f59e0b' }}>
+              <GitBranch size={24} />
             </div>
-            <h3 className={styles.cardTitle}>Regression Testing</h3>
-            <p className={styles.cardDesc}>Once a fix is applied, Evalipie automatically runs your test suite to ensure no existing functionality was broken.</p>
+            <h3 className={styles.cardTitle}>Automated Regression</h3>
+            <p className={styles.cardDesc}>Once a fix is applied, Evalipie automatically runs your entire test suite to ensure the fix actually works and no existing functionality was inadvertently broken.</p>
           </div>
         </div>
       </div>
 
       <footer className={styles.footer}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '2rem', maxWidth: '1200px', margin: '0 auto', textAlign: 'left', padding: '0 2rem' }}>
-          <div>
-            <h4 style={{ color: 'white', marginBottom: '1rem' }}>PRODUCT</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', color: '#94a3b8' }}>
-              <Link href="/dashboard">Dashboard</Link>
-              <Link href="/investigations">Investigations</Link>
-              <Link href="/tickets">Tickets</Link>
-              <Link href="/projects">Projects</Link>
-              <Link href="/analytics">Analytics</Link>
+        <div className={styles.footerGrid}>
+          <div className={styles.footerCol} style={{ gridColumn: 'span 2' }}>
+            <div className={styles.logo} style={{ marginBottom: '1.5rem' }}>
+              <div className={styles.logoIcon}>
+                <Sparkles size={16} color="#8b5cf6" />
+              </div>
+              EVALI<span className={styles.accent}>PIE</span>
             </div>
+            <p style={{ color: '#64748b', lineHeight: 1.6, maxWidth: '300px' }}>
+              The premier autonomous agent for investigating and resolving complex software issues with evidence-based verification.
+            </p>
           </div>
-          <div>
-            <h4 style={{ color: 'white', marginBottom: '1rem' }}>RESOURCES</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', color: '#94a3b8' }}>
-              <Link href="/docs">Documentation</Link>
-              <Link href="/docs">Help Center</Link>
-              <Link href="/docs">FAQ</Link>
-              <Link href="/security">Security</Link>
-            </div>
+          
+          <div className={styles.footerCol}>
+            <h4>PRODUCT</h4>
+            <Link href="/dashboard">Dashboard</Link>
+            <Link href="/investigations">Investigations</Link>
+            <Link href="/tickets">Tickets</Link>
+            <Link href="/projects">Projects</Link>
+            <Link href="/analytics">Analytics</Link>
           </div>
-          <div>
-            <h4 style={{ color: 'white', marginBottom: '1rem' }}>COMPANY</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', color: '#94a3b8' }}>
-              <Link href="/about">About</Link>
-              <Link href="/contact">Contact</Link>
-            </div>
+          
+          <div className={styles.footerCol}>
+            <h4>RESOURCES</h4>
+            <Link href="/docs">Documentation</Link>
+            <Link href="/docs">Help Center</Link>
+            <Link href="/docs">API Reference</Link>
+            <Link href="/security">Security</Link>
+            <Link href="/contact">Support</Link>
           </div>
-          <div>
-            <h4 style={{ color: 'white', marginBottom: '1rem' }}>LEGAL</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', color: '#94a3b8' }}>
-              <a href="#">Privacy</a>
-              <a href="#">Terms</a>
-            </div>
+          
+          <div className={styles.footerCol}>
+            <h4>COMPANY</h4>
+            <Link href="/about">About Us</Link>
+            <Link href="/contact">Contact</Link>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
           </div>
         </div>
-        <div style={{ marginTop: '4rem', color: '#64748b', fontSize: '0.875rem' }}>
-          ©️ 2026 Evalipie • Powered by TrueForge
+        
+        <div className={styles.footerBottom}>
+          <div>©️ 2026 Evalipie Inc. All rights reserved.</div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            Powered by <strong style={{ color: '#0f172a' }}>TrueForge</strong>
+          </div>
         </div>
       </footer>
     </main>
