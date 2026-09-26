@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import { Terminal, Check, Loader2, ShieldCheck } from 'lucide-react';
-import styles from './dashboard.module.css';
+import styles from '../../../dashboard/dashboard.module.css';
 
 type Phase = 'initializing' | 'understanding' | 'inspecting' | 'reproducing' | 'investigating' | 'fixing' | 'retesting' | 'verifying' | 'done';
 

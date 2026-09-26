@@ -78,7 +78,44 @@
   overflow-y: auto;
 }
 
-/* Dashboard Page Styles */
+.mobileMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobileClose {
+  display: none;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -260px;
+    z-index: 50;
+    transition: left 0.3s ease;
+  }
+  
+  .sidebar.mobileOpen {
+    left: 0;
+  }
+
+  .mobileMenuBtn {
+    display: block;
+  }
+
+  .mobileClose {
+    display: block;
+  }
+}
+
 .header {
   padding: 2rem 3rem;
   border-bottom: 1px solid var(--border-color);

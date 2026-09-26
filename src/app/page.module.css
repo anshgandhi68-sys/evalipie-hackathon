@@ -395,3 +395,45 @@
   color: var(--text-muted);
   font-family: monospace;
 }
+
+.workflowSection {
+  padding: 4rem 2rem;
+  background-color: #0f172a;
+  border-top: 1px solid #1e293b;
+  border-bottom: 1px solid #1e293b;
+}
+
+.workflowContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.workflowStep {
+  background-color: #1e293b;
+  color: #c4b5fd;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid #334155;
+  white-space: nowrap;
+}
+
+.workflowArrow {
+  color: #64748b;
+  font-weight: bold;
+  margin: 0 0.5rem;
+}
+
+.footer {
+  margin-top: 4rem;
+  padding: 4rem 0 2rem;
+  border-top: 1px solid #1e293b;
+  background-color: #020617;
+  text-align: center;
+}
